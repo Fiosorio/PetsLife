@@ -1,0 +1,49 @@
+.custom-card {
+    max-width: 250px; /* Ajusta el tamaño de la tarjeta */
+    margin-left:0;    /* Centra horizontalmente */
+    margin-top: 40px; /* Espacio superior */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Opcional: sombra */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+    --background:#173630;
+    color:rgb(255, 255, 255);
+  }
+
+  ion-content{
+    --background:#28584f;
+  }
+  ion-card-title{
+    color:aliceblue;
+  }
+
+  ion-card-subtitle{
+    color:aliceblue;
+  }
+
+  ion-icon {
+    float: right; /* Alinea el icono a la derecha */
+    font-size: 48px;
+    color: #DAF7A6;
+  }
+
+  .add-pet {
+    display: flex;               /* Utiliza flexbox para alinear el icono y el texto */
+    align-items: center;        /* Centra verticalmente el contenido */
+    cursor: pointer;            /* Cambia el cursor al pasar sobre el elemento */
+  }
+  
+  .add-icon {
+    margin-right: 8px;         /* Espacio entre el icono y el texto */
+    font-size: 48px;           /* Ajusta el tamaño del icono */
+  }
+  
+  /* Si quieres quitar el círculo de fondo, puedes añadir esto: */
+  ion-icon {
+    background: none;          /* Asegúrate de que no haya fondo */
+    border: none;              /* Sin borde */
+  }
+
+  .add-icon2{
+    margin-left: 0;         /* Espacio entre el icono y el texto */
+    font-size: 48px; 
+  }
+  

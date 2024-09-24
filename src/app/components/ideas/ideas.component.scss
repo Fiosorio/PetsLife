@@ -1,0 +1,36 @@
+.custom-card {
+    max-width: 300px; /* Tamaño máximo de la tarjeta */
+    width: 100%; /* Hace que la tarjeta sea responsiva y ocupe todo el ancho disponible */
+    margin: 20px auto; /* Centra la tarjeta y añade espacio entre ellas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    border-radius: 10px; /* Bordes redondeados */
+    --background: #173630;
+    color: rgb(255, 255, 255);
+    font-family: 'Sanvito', cursive;
+}
+
+ion-content {
+    --background: #28584f;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten al tamaño de la pantalla */
+    padding: 20px;
+}
+
+ion-card-title, ion-card-subtitle {
+    color: aliceblue;
+    text-align: center; /* Alinea el título al centro */
+}
+
+.centered-image {
+    display: block;
+    margin: 0 auto;
+    width: 80%; /* Hace que la imagen ocupe el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 200px; /* Ajusta la altura máxima para que todas las tarjetas tengan la misma altura */
+    object-fit: cover; /* Ajusta la imagen sin distorsionar */
+}
+
+.card-content {
+    text-align: justify; /* Justifica el texto para mejorar la lectura */
+}

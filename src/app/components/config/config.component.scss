@@ -1,0 +1,14 @@
+ion-content {
+    --background: #28584f;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten al tamaño de la pantalla */
+    padding: 20px;
+}
+
+ion-thumbnail img {
+    width: 80px; /* Ajusta el tamaño a tu preferencia */
+    height: 80px; /* Asegura que mantenga una proporción adecuada */
+    object-fit: cover; /* Hace que la imagen se ajuste sin distorsionarse */
+  }
+  

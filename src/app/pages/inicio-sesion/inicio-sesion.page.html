@@ -1,0 +1,51 @@
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <div class="ion-text-center">
+      <img class="logo roll-in-left" src="../../../assets/img/logo.png.png" alt="logo">
+    </div>
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">
+        Inicio de sesion
+      </ion-card-title>
+      <ion-card-content>
+        <ion-item>
+          <ion-input label="Usuario" fill="solid"
+           placeholder="ingresa el usuario"
+           labelPlacement="floating"
+           type="text"
+           [(ngModel)]="login.usuario">
+          </ion-input>
+        </ion-item>
+        <ion-item class="contraseña">
+          <ion-input label="Contraseña" 
+          fill="solid"
+          placeholder="Ingresa la contraseña"
+          labelPlacement="floating"
+          type="password"
+          [(ngModel)]="login.password"
+          >
+          </ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col size="5">
+            <ion-button expand="block" shape="round" (click)="Ingresar()">Ingresar</ion-button>
+          </ion-col>
+          <ion-col size="5">
+            <ion-button expand="block" shape="round" routerLink="/registro" >Registrarse</ion-button>
+          </ion-col>
+          <ion-col size="12">
+            <p class="ion-text-center">
+              <a routerLink="/restore"> recupera tu contraseña</a>
+            </p>
+
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card-header>
+  </ion-card> 
+</ion-content>
+
+
+
+
