@@ -1,0 +1,49 @@
+ion-content{
+  --background:#173630;
+}
+.custom-card1{
+  --background:hsl(169, 38%, 25%);
+  margin-top: 100px;
+
+}
+.centered-image {
+  display: block;
+  margin: 0 auto;
+  width: 80%; 
+  height: auto; 
+  max-height: 200px; 
+  object-fit: cover; 
+}
+
+.add-icon2{
+  color:chartreuse;
+  float: right;
+  font-size: 30px;
+}
+
+ion-card-title, ion-card-subtitle,span{
+  color: aliceblue;
+  
+}
+
+
+
+
+.add-icon {
+  color:chartreuse;
+  
+  bottom: 10px;                /* Ajusta la distancia desde la parte inferior del botón */
+  right: 10px;                 /* Ajusta la distancia desde el borde derecho del botón */
+  font-size: 50px;             /* Tamaño del ícono, ajusta según lo necesites */
+  color: chartreuse;              /* Color del ícono (cambia este valor al que desees) */
+  background: #463552;        /* Color de fondo del ícono */
+  border-radius: 50%;          /* Hace que el ícono tenga forma circular */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+
+}
+.add-pet-button{
+  float: right;
+  
+}
+
+
