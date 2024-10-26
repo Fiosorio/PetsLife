@@ -1,0 +1,41 @@
+ion-content{
+    --background: #28584f;
+}
+
+ion-toolbar{
+    --background: #463552;
+    color:aliceblue;
+}
+
+.custom-select-item {
+  --background: white; /* Fondo blanco */
+  border-radius: 12px; /* Borde redondeado */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra suave para resaltar */
+  padding: 5px;
+  color: black; /* Color del texto */
+  display: flex;
+  align-items: center;
+}
+
+.number-input {
+  width: 60px; /* Ancho del campo de entrada de número */
+  margin-right: 10px; /* Espacio entre el campo de número y el select */
+  --background: transparent;
+  color: black;
+}
+
+.custom-select {
+  --placeholder-color: #888888; /* Color del placeholder para que sea visible */
+  color: black; /* Color del texto en el select */
+  width: 80px; /* Ancho del select */
+}
+
+
+
+ion-list {
+  padding: 0;
+  border-radius: 12px; /* Borde redondeado para la lista completa */
+  overflow: hidden; /* Oculta cualquier contenido que se salga de los bordes */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+  background: #28584f; /* Fondo blanco */
+}

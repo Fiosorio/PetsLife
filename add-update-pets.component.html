@@ -1,0 +1,63 @@
+<app-header [isModal]="true"  title="Agregar mascotas"></app-header>
+<ion-content>
+
+    <form [formGroup]="form" class="ion-padding ion-text-center" (ngSubmit)="submit()" (keypress.enter)="submit()">
+      
+        <app-custom-input
+        autocomplete="name"
+        icon="person-outline"
+        [control]="form.controls.name"
+        type="text"
+        label="Nombre"
+        ></app-custom-input>
+
+
+   
+        <ion-list>
+          <ion-item class="custom-select-item">
+            <!-- Campo de entrada de número para el peso -->
+            <app-custom-input
+              icon="barbell-outline"
+              [control]="form.controls.peso"
+              type="number"
+              label="Peso"
+            ></app-custom-input>
+
+      
+            <!-- Select para Kg o Lb -->
+            <ion-select aria-label="Unidad de Peso" interface="popover" placeholder="Unidad" class="custom-select" formControlName="pesoUnidad">
+              <ion-select-option value="kg">Kg</ion-select-option>
+              <ion-select-option value="lb">Lb</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+
+        <ion-select formControlName="specie" (ionChange)="onSpecieChange($event)">
+          <ion-select-option value="cat">Gato</ion-select-option>
+          <ion-select-option value="dog">Perro</ion-select-option>
+        </ion-select>
+    
+        <ion-select formControlName="raza">
+          <ion-select-option *ngFor="let breed of (form.controls.specie.value === 'cat' ? catBreeds : dogBreeds)" [value]="breed.name">
+            {{ breed.name }}
+          </ion-select-option>
+        </ion-select>
+
+
+
+       
+          
+      
+      <div class="validators" *ngIf="form.controls.name.errors && form.controls.name.touched">
+        <div *ngIf="form.controls.name.errors?.['required']">Se necesita un nombre</div>
+        <div *ngIf="form.controls.name.errors?.['minlenght']">El nombre debe tener al menos 4 caracteres</div>
+      </div>
+  
+  
+  
+        
+        <ion-button  mode="md" class="ion-margin" type="submit" [disabled]="form.invalid">
+          Agregar Mascota
+        </ion-button>
+      </form>
+</ion-content>
