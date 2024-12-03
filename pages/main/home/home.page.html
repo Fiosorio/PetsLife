@@ -1,0 +1,24 @@
+<ion-toolbar >
+  <ion-button *ngIf="isHomePage" (click)="signOut()">
+    <ion-icon name="log-out"></ion-icon>
+  </ion-button>
+</ion-toolbar>
+
+<ion-content>
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-segment (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="pets">
+        <ion-icon name="paw"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="datosR">
+        <ion-icon name="bulb"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="consejos">
+        <ion-icon name="nutrition"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>

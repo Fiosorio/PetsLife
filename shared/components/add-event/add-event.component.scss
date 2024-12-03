@@ -1,0 +1,27 @@
+.custom-input {
+    --border-color: #e0e0e0;
+    --border-radius: 15px;
+    --border-style: solid;
+    --border-width: 1px;
+    margin: 20px 0;
+   
+  }
+  
+
+  ion-content{
+    --background: #28584f;
+}
+
+ion-toolbar{
+    --background: #463552;
+    color:aliceblue;
+}
+
+ion-list {
+    padding: 0;
+    border-radius: 12px; /* Borde redondeado para la lista completa */
+    overflow: hidden; /* Oculta cualquier contenido que se salga de los bordes */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para resaltar */
+    background: #ffffff; /* Fondo blanco */
+    color:black;
+  }

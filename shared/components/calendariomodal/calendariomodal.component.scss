@@ -1,0 +1,24 @@
+.small-modal {
+    width: 80%; /* Ancho del modal */
+    max-width: 400px; /* Ancho máximo del modal */
+    border-radius: 12px; /* Bordes redondeados */
+    margin: auto; /* Centrar el modal */
+    --background: #28584f; /* Color de fondo del modal */
+  }
+  
+  /* Opcional: para centrar el contenido */
+  ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    --background:black;
+  }
+  
+
+  ion-datetime {
+    --background: #3d2d2e;
+    --background-rgb: 255, 241, 242;
+  
+    border-radius: 16px;
+    box-shadow: rgba(var(--ion-color-rose-rgb), 0.3) 0px 10px 15px -3px;
+  }

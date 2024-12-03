@@ -1,0 +1,13 @@
+ion-toolbar{
+    --background: #463552;
+    color:aliceblue;
+}
+
+ion-button {
+    --background: #463552;
+  }
+
+  ion-title {
+    text-align: center; /* Centrar el texto */
+    flex: 1; /* Hacer que el título use el espacio disponible */
+  }

@@ -1,0 +1,75 @@
+<app-header [isModal]="true"[title]="pet ? 'Modificar mascota':'Agregar mascotas'"></app-header>
+<ion-content>
+
+  <form [formGroup]="form" class="ion-padding ion-text-center" (ngSubmit)="submit()" (keypress.enter)="submit()">
+    
+    <ion-avatar *ngIf="form.value.image">
+      <img [src]="form.value.image" />
+    </ion-avatar>
+    <ion-icon class="image-icon" *ngIf="!form.value.image" name="image-outline"></ion-icon>
+
+    <br>
+    <ion-button (click)="takeImage()" shape="round">
+      Agrega una foto
+    </ion-button>
+
+    <app-custom-input autocomplete="name" icon="person-outline" [control]="form.controls.name" type="text" label="Nombre"></app-custom-input>
+
+    <ion-list>
+      <ion-item class="custom-select-item">
+        <ion-select formControlName="specie" (ionChange)="onSpecieChange($event)" class="custom-select" placeholder="especie">
+          <ion-select-option value="cat">Gato</ion-select-option>
+          <ion-select-option value="dog">Perro</ion-select-option>
+        </ion-select>
+
+        <ion-select formControlName="raza" class="custom-select" placeholder="raza">
+          <ion-select-option *ngFor="let breed of (form.controls.specie.value === 'cat' ? catBreeds : dogBreeds)" [value]="breed.name">
+            {{ breed.name }}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-list>
+      <ion-item>
+        <ion-label>Sexo</ion-label>
+        <ion-segment value="{{ form.controls.sexo.value }}" (ionChange)="onSexoChange($event)">
+          <ion-segment-button value="masculino">
+            <ion-label>Macho</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="femenino">
+            <ion-label>Hembra</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-list>
+      <ion-item class="custom-select-item">
+        <app-custom-input icon="barbell-outline" [control]="form.controls.peso" type="number" label="Peso"></app-custom-input>
+        <ion-select aria-label="Unidad de Peso" interface="popover" placeholder="Unidad" class="custom-select" formControlName="pesoUnidad">
+          <ion-select-option value="kg">Kg</ion-select-option>
+          <ion-select-option value="lb">Lb</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <br>
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Fecha de nacimiento/adopción</ion-label>
+        <ion-input formControlName="birthDate" readonly (click)="openCalendarModal()"></ion-input>
+      </ion-item>
+    </ion-list>
+    <br>
+
+    <div class="validators" *ngIf="form.controls.name.errors && form.controls.name.touched">
+      <div *ngIf="form.controls.name.errors?.['required']">Se necesita un nombre</div>
+      <div *ngIf="form.controls.name.errors?.['minlength']">El nombre debe tener al menos 4 caracteres</div>
+    </div>
+
+    <ion-button mode="md" class="ion-margin" type="submit" [disabled]="form.invalid">
+     {{ pet ? 'Modificar mascota':'Agregar mascotas' }}
+    </ion-button>
+  </form>
+
+</ion-content>

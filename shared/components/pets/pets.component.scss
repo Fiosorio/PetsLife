@@ -1,0 +1,25 @@
+
+ion-content {
+  --background: #28584f; /* Cambia el fondo del contenido */
+}
+
+.custom-fab {
+  --background: #463552; /* Color de fondo del botón */
+  margin-bottom: 20px; /* Espaciado inferior */
+  --color: white; /* Color del ícono dentro del botón */
+}
+
+.custom-fab-left {
+  @extend .custom-fab;
+  margin-left: 16px; /* Espaciado desde el borde izquierdo */
+}
+
+.custom-fab-right {
+  @extend .custom-fab;
+  margin-right: 16px; /* Espaciado desde el borde derecho */
+}
+
+.custom-fab ion-icon {
+  --background: #463552; /* Color de fondo para el ícono */
+  color: white; /* Color del ícono */
+}
