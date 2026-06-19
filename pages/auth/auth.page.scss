@@ -1,0 +1,63 @@
+ion-content{
+    --background:#0e6655 ;
+}
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .column-layout {
+    flex-direction: column; /* Organiza los elementos en columna */
+  }
+  
+  .logo {
+    width: 300px;  /* Ajusta el tamaño de la imagen según lo que necesites */
+    margin-bottom: 20px; /* Añade espacio entre la imagen y el formulario */
+  }
+  
+  .auth-form {
+    width: 100%;
+    max-width: 400px;  /* Limita el ancho del formulario */
+  }
+  
+  .submitt {
+    margin-top: 20px;  /* Espacio adicional sobre el botón de enviar */
+  }
+  
+  ion-button {
+    --background: #4a235a; /* Cambia este color al que desees */
+  }
+
+  .roll-in-left {
+    -webkit-animation: roll-in-left 0.6s ease-out both;
+    animation: roll-in-left 0.6s ease-out both;
+  }
+  
+  /* Animación para el logo */
+  @-webkit-keyframes roll-in-left {
+    0% {
+      -webkit-transform: translateX(-800px) rotate(-540deg);
+      transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes roll-in-left {
+    0% {
+      -webkit-transform: translateX(-800px) rotate(-540deg);
+      transform: translateX(-800px) rotate(-540deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) rotate(0deg);
+      transform: translateX(0) rotate(0deg);
+      opacity: 1;
+    }
+  }

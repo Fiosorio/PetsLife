@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Agregar Evento</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item class="custom-select-item">
+      <ion-label position="stacked">Título</ion-label>
+      <ion-input class="custom-input" [(ngModel)]="eventData.title" placeholder="Ingresa un título"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Ubicación</ion-label>
+      <ion-input class="custom-input" [(ngModel)]="eventData.location" placeholder="Ubicación"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Descripción</ion-label>
+      <ion-textarea class="custom-input" [(ngModel)]="eventData.description"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Fecha y Hora</ion-label>
+      <ion-datetime
+        [(ngModel)]="eventData.date"
+        placeholder="Selecciona fecha y hora"
+        display-format="MM/DD/YYYY HH:mm"
+      ></ion-datetime>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="save()">Guardar Evento</ion-button>
+</ion-content>

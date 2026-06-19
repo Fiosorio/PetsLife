@@ -1,0 +1,19 @@
+
+
+<ion-content>
+  <!-- Tarjeta para el gato -->
+  <ion-card class="custom-card">
+    <img [src]="catImageUrl" alt="Gato" class="centered-image" *ngIf="catImageUrl" />
+    <ion-card-content class="card-content">
+      <p>{{ catFact || 'Cargando...' }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Tarjeta para el perro -->
+  <ion-card class="custom-card">
+    <img [src]="dogImageUrl" alt="Perro" class="centered-image" *ngIf="dogImageUrl" />
+    <ion-card-content class="card-content">
+      <p>{{ dogFact || 'Cargando...' }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

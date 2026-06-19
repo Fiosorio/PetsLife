@@ -1,0 +1,37 @@
+ion-content {
+    --padding-top: 80px; /* Espacio para evitar que la barra superior cubra el contenido */
+    --background: #28584f;
+  }
+  
+  ion-toolbar {
+    --background: #463552;
+    color: aliceblue;
+  }
+  
+  ion-title {
+    color: aliceblue;
+  }
+  
+  ion-segment {
+    --background: #3b8d77;
+    --indicator-color: #00bfff; /* Color del indicador de la pestaña seleccionada */
+    margin-top: 10px; /* Margen superior para separación de la barra */
+  }
+  
+  ion-segment-button {
+    --color-checked: #87cefa; /* Color cuando una pestaña está seleccionada */
+  }
+  
+  ion-button {
+    --background: #463552;
+  }
+  
+  ion-icon {
+    color: aliceblue;
+  }
+  ion-header{
+    --background:#28584f;
+  }
+
+
+  

@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+
+    <ion-button (click)="dismissModal()"*ngIf="isModal">
+      <ion-icon name="arrow-undo-circle-outline"></ion-icon>
+    </ion-button> 
+
+    <ion-title>{{title}}</ion-title>
+  
+  </ion-toolbar>
+</ion-header>

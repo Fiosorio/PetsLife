@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <div class="testerror">
+    <h1 id="titulo">Error 404</h1>
+    <p>Pagina no encontrada</p>
+  </div>
+  <div class="container">
+    <lottie-player
+    slot="end"
+    loop
+    src="https://lottie.host/36bba69d-4161-4eb3-887d-552bad959c36/q8ZtjBEOvs.json"
+    ></lottie-player>
+  </div>
+
+  <div>
+    <p class="textoerro">
+      La pagina que estabas buscando fue eliminada, cambio su nombre o se
+       encuentra temporalmente deshabilitada.
+    </p>
+    <ion-button id="button" routerLink="/auth" expand="block"  shape="round">
+      Volver al login
+    </ion-button>
+  </div>
+</ion-content>
