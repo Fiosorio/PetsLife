@@ -1,0 +1,41 @@
+# --- Python / Django ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.venv
+.env
+.tox
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+*,cookie
+
+# --- Bases de Datos ---
+# No subas tu base de datos local, cada PC debe tener la suya
+db.sqlite3
+db.sqlite3-journal
+
+# --- Archivos Media ---
+# No subas las fotos que suben los usuarios (o tú mismo) en desarrollo
+media/
+
+# --- IDEs / Editores ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# --- Archivos de entorno / Secretos ---
+.env
+secret_key.txt
+.venv/
+__pycache__/
+*.pyc
